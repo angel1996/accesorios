@@ -1,0 +1,309 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+</head> 
+<script language="javascript">
+var nombre, mayu, ancho, chr;
+function blabla(){
+	nombre=document.getElementById("txtnombre").value;
+	ancho=nombre.length;
+	mayu=nombre.toUpperCase();
+	document.getElementById("txtnombre").value=mayu;
+	nombre=document.getElementById("txtnombre").value;
+	for (x=0; x<=ancho-1; x++)
+	{
+		chr=nombre.charAt(x);
+	if((chr>='A' && chr<='Z') || (chr==" "))
+	{
+	} 
+else
+	 {
+		alert("Caracteres incorrectos");
+		break;
+	}
+	}
+}
+var mail, pp, up, pp1, up1;
+function email(){
+mail=document.getElementById("txtmail").value;
+
+
+ 
+	if(((mail.charAt(0)>='0')&&(mail.charAt(0)<='9'))||(mail.charAt(0)=='@'))
+	{
+			alert("Primer caracter inválido");
+		}
+	else
+	{
+		pp=mail.indexOf('@'); 
+		up=mail.lastIndexOf('@');
+		if(pp!=up){
+			alert("Solo introduce un @");
+			
+		}
+		else{
+			if((pp==-1)&&(up==-1))
+			{
+			alert("Introduce un @");	
+			
+				}
+				else{
+					pp1=mail.indexOf('.');
+					up1=mail.lastIndexOf('.');
+	          if(pp1!=up1)
+			  {
+				  alert("Solo introduce un punto");
+				  
+			  }
+			  else{
+				  if((pp1==-1)&&(up1==-1)){
+					  alert("Introduce un punto");
+					  
+					  }
+			  }
+					}
+			}
+	}		
+ }
+ 
+function Tel(){
+	var nume, ancho3, numer;
+	nume=document.getElementById("txttel").value;
+	ancho3=nume.length;
+	for(x=0; x<=ancho3-1; x++){
+		numer=nume.charAt(x);
+	if(((numer>=0) && (numer<=9 ))|| (numer=='-'))
+	{
+		}
+		else{
+			alert("Caracteres Inválidos, Favor de introducir solo números");
+				break;
+			}
+			
+		}
+	}
+
+	var texto, mayu1, ancho2;
+	function asunto(){
+		texto=document.getElementById("textarea").value;
+		ancho2=texto.length;
+		mayu1=texto.toUpperCase();
+		document.getElementById("textarea").value=mayu1;
+	}
+	var se;
+  var seg;
+	function segu(){
+    se=document.getElementById("txtseg").value;
+		seg=document.getElementById("txtse").value;
+    if(seg==se)
+	{
+		}
+    else{
+      alert("Valor de seguridad incorrecto");
+	document.getElementById("txtse").value="";
+    }
+	}
+	
+	var nomb, maile, telef, asu, segu;
+	var l1, l2, l3, l4, l5, se;
+function hola1(){
+	nomb=document.getElementById("txtnombre").value;
+	maile=document.getElementById("txtmail").value;
+  telef=document.getElementById("txttel").value;
+  asu=document.getElementById("textarea").value;
+  segu=document.getElementById("txtse").value;
+    se=document.getElementById("txtseg").value;
+    l1=nomb.length;
+    l2=maile.length;
+    l3=telef.length;
+    l4=asu.length;
+    l5=segu.length;
+{
+if((l1==0) || (l2==0) || (l3==0) || (l4==0) || (l5==0))
+  {
+    alert("Introduzca todos los datos");
+  }
+  else{
+    alert("Mensaje enviado");
+    document.getElementById("txtnombre").value="";
+    document.getElementById("txtmail").value="";
+    document.getElementById("txttel").value="";
+    document.getElementById("textarea").value="";
+    document.getElementById("txtse").value="";
+  }
+}
+	}
+
+</script>
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>LOUIS VUITTON</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+        
+        <center><img src="pagina2/lv.jpg" width="300" height="410"></center>
+<li><a href="#page2">¿Quiénes Somos?</a></li>
+            <li><a href="#page3">Servicios o Productos</a></li>
+			<li><a href="#page4">Equipo</a></li>
+            <li><a href="#page5">Contáctanos</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Emma Marina Ruis Cielo </h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>LOUIS VUITTON</h1>
+	</div>
+	<div data-role="content">	
+		<h1>MISIÓN:</h1>
+        <p>Crear nuevos accesorios para dama, para que la mujer luzca aún más linda con esta variedad de productos.<br> conseguir que nuestras clientas estén conformes y felices. </p>	
+        
+        <h1>VISIÓN:</h1>
+        <p>Conseguir que nuestros clientes estén a gusto con  nuestra compañía y sigan eligiéndonos a nosotros como una empresa de calidad.<br> Seguir creciendo como empresa y como familia</p>	
+        
+        <h1>VALORES:</h1>
+        <p>1° Crear un nuevo estilo y único para cada una de nuestras clientas.</p>
+        <p>2° Implementar estilo y glamour al mundo de la moda
+.</p>
+        <p>3° Resaltar la belleza de la mujer con este tipo de accesorios.</p>
+        
+    <center><img src="pagina2/catalogo.jpg" width="229" height="220"></center> </div>
+	<div data-role="footer">
+		<h4>Emma Marina Ruis Cielo</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>LOUIS VUITTON</h1>
+	</div>
+	<div data-role="content">	
+		<h1>Collares</h1>
+       Tenemos una gran variedad de collares para mostrarte y que puedas escoger el que más te guste. <br>
+       
+        <center><img src="pagina2/collar.jpg" width="500" height="300"></center>
+        
+ <h1>Bolsos</h1> 
+Los bolsos que tenemos para ti son los más buscados en el mundo de la moda, tenemos gran variedad de bolsos que tú puedes escoger.  
+
+<center><img src="pagina2/bolsos.jpg" width="900" height="525"></center> 
+
+<h1>Zapatos</h1>
+Los zapatos son muy necesarios en la vida cotidiana y también en el glamour.<br>
+Por eso traemos para ti muchos modelos de zapatos y estilos diferentes para cada ocasión.
+
+<center><img src="pagina2/images (2).jpg" width="265" height="191"></center> </div>
+        
+	<div data-role="footer"><br>    
+<h4>Emma Marina Ruis Cielo</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo de Trabajo</h1>
+	</div>
+	<div data-role="content">
+    <center><table width="0" border="0">
+  <tr>
+    <td><img src="pagina2/chris.jpg" width="200" height="200"></td>
+    <td>christian castilla marín.<br>
+    16 anos<br>
+    Técnico Programador.<br>
+    Representante Asistente personal, Fotógrafo<br>
+    Maestro Pizzero<br>
+    Actualmente estudia la prepa. </td>
+  </tr>
+  <tr>
+    <td><img src="pagina2/emma.JPG" width="200" height="200"></td>
+    <td>Emma Marina Ruis Cielo.<br>
+    16 años<br>
+    Técnico Programador<br>
+    Especialista en Artes Plásticas<br>
+    Diseñadora Gráfica</td>
+  </tr>
+</center></table>
+	
+		
+	</div>
+	<div data-role="footer">
+		<h4>Emma Marina Ruis Cielo</h4>
+	</div>
+</div>
+
+
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>LOUIS VUITTON</h1>
+	</div>
+	<div data-role="content"><center>	
+   Dirección: calle centenario #12<br>
+    Correo Electrónico: Louisv_ac@live.com.mx, Facebook/Louis. <br>
+    Teléfono: 243 117 22 81 ó 001 800 849 72 03.
+</center>
+    
+    <table width="0" border="0">
+  <tr>
+    <td>Nombre:</td>
+    <td><div data-role="fieldcontain">
+      <input type="text" name="txtnombre" id="txtnombre" value="" onBlur="blabla()"  />
+      
+    </div></td>
+  </tr>
+  <tr>
+    <td>E-Mail:</td>
+    <td><div data-role="fieldcontain">
+      <input type="text" name="txtmail" id="txtmail" value="" onBlur="email()"  />
+    </div></td>
+  </tr>
+  <tr>
+    <td>Telefono:</td>
+    <td><div data-role="fieldcontain">
+      <input type="text" name="txttel" id="txttel" value="" onBlur="Tel()" />
+    </div></td>
+  </tr>
+  <tr>
+    <td>Asunto</td>
+    <td><div data-role="fieldcontain">
+      <textarea cols="40" rows="8" name="textarea" id="textarea" onBlur="asunto()"></textarea>
+    </div></td>
+  </tr>
+ 
+  <tr>
+    <td>Seguridad</td>
+    <td><div data-role="fieldcontain">
+      <input type="text" name="txtseg" id="txtseg" value="2014"  disabled="disabled" />
+      
+       <input type="text" name="txtse" id="txtse" value="" OnBlur="segu()" />
+    </div></td>
+  </tr>
+  <tr>
+    <td colspan="2"><button onClick="hola1()"> Aceptar</button></td>
+    <td></td>
+  </tr>
+</table>
+
+    		
+	</div>
+	<div data-role="footer">
+		<h4>Emma Marina Ruis Cielo</h4>
+	</div>
+</div>
+
+</body>
+</html>
+
+    
+    
+ 
